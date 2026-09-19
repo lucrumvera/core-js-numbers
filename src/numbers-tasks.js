@@ -201,11 +201,11 @@ function roundToPowerOfTen(num, pow) {
 function isPrime(n) {
   if (n < 2) return false;
 
-  for (let i = 2; i <= Math.sqrt(n); i +=1) {
+  for (let i = 2; i <= Math.sqrt(n); i += 1) {
     if (n % i === 0) return false;
-}
+  }
 
-return true;
+  return true;
 }
 
 /**
@@ -279,7 +279,7 @@ function getFibonacciNumber(index) {
  *   1  => 1
  */
 function getSumToN(n) {
-  return (n * (n +1)) / 2;
+  return (n * (n + 1)) / 2;
 }
 
 /**
@@ -295,8 +295,8 @@ function getSumToN(n) {
  */
 function getSumOfDigits(num) {
   return String(num)
-  .split('')
-  .reduce((sum, digit) => sum + Number(digit), 0);
+    .split('')
+    .reduce((sum, digit) => sum + Number(digit), 0);
 }
 
 /**
@@ -311,7 +311,7 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return num > 0 && (num & (num - 1)) === 0;
+  return num > 0 && Number.isInteger(Math.log2(num));
 }
 
 /**
@@ -554,7 +554,7 @@ function getIntegerPartNumber(number) {
  * 0.1, 0.2, 0.3 => 0.6
  */
 function getSumOfNumbers(x1, x2, x3) {
-  return Number(( x1 + x2 + x3).toFixed(10));
+  return Number((x1 + x2 + x3).toFixed(10));
 }
 
 /**
